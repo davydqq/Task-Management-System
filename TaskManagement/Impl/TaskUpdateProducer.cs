@@ -7,11 +7,11 @@ namespace Transportation.RabbitMQ.Impl;
 
 public class TaskUpdateProducer : ProducerBase<TaskUpdate>
 {
-    protected override string ExchangeName => "task";
+    public override string ExchangeName => "task";
 
-    protected override string RoutingKeyName => "update";
+    public override string RoutingKeyName => "update";
 
-    protected override string AppId => "default";
+    public override string AppId => "default";
 
     public TaskUpdateProducer(
         ConnectionFactory connectionFactory, 

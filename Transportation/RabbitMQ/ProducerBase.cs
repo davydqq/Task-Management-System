@@ -10,9 +10,9 @@ namespace Transportation.RabbitMQ;
 public abstract class ProducerBase<T> : RabbitMqClientBase, IRabbitMqProducer<T>
 {
     private readonly ILogger<ProducerBase<T>> _logger;
-    protected abstract string ExchangeName { get; }
-    protected abstract string RoutingKeyName { get; }
-    protected abstract string AppId { get; }
+    public abstract string ExchangeName { get; }
+    public abstract string RoutingKeyName { get; }
+    public abstract string AppId { get; }
 
     protected ProducerBase(
         ConnectionFactory connectionFactory,

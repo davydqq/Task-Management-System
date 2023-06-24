@@ -9,7 +9,7 @@ namespace Transportation.RabbitMQ;
 
 public abstract class ConsumerBase<T> : RabbitMqClientBase
 {
-    private readonly ILogger<ConsumerBase<T>> _logger;
+    protected readonly ILogger<ConsumerBase<T>> _logger;
     protected abstract string QueueName { get; }
 
     public ConsumerBase(
